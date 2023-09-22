@@ -1,0 +1,54 @@
+<style>
+  .container1 {
+  display: flex;
+  align-items: top;
+  justify-items: space-around;
+}
+</style>
+<div class="container">
+  <div>
+    Welcome <b>{{name}}</b>.<br />
+  </div>
+  <hr />
+  <div class="container1">
+  <div>
+    <img alt="" src="/assets/cartwright official headshot_2.jpeg" style="width:250px;margin:0 10px 10px 0">
+  </div>
+  <div>
+    U.S. Representative Matt Cartwright represents Pennsylvania’s 8th Congressional District and was first sworn into Congress in 2013. His priorities include strengthening the middle class, creating jobs, ensuring quality health care, protecting seniors, and supporting veterans and military families. A strong believer in working with members of both political parties, he has introduced more bills with Democratic and Republican support than any other House Democrat since he was first elected. As a result, he was named one of the most effective House Democrats by the nonpartisan Center for Effective Lawmaking. So far, Rep. Cartwright has succeeded in authoring and passing 12 substantive bills into law, signed and enacted by the last three Presidents.
+    <br />
+    A senior member of the powerful House Committee on Appropriations, Rep. Cartwright serves as the Ranking Member of the Commerce, Justice and Science Subcommittee and the second-highest Democrat on the Financial Services and General Government Appropriations Subcommittee. This presents an excellent opportunity for him to bring every penny of our fair share of federal tax dollars to Northeastern Pennsylvania. He was ranked No. 1 in Pennsylvania two years in a row and in 2022 he was No. 10 out of 435 congressional districts in the country for securing federal project dollars for his district.  
+    <br />
+    Local funding highlights include the expansion of medical and mental health services for women, children, families and the elderly; infrastructure upgrades in the form of water treatment, flood protection and paving projects; workforce development and job training; and new equipment, technology and operation centers for area police, firefighters and emergency responders. 
+    <br />
+    He lives in Moosic with his wife, Marion. They have two sons, Jack and Matthew.
+  </div>
+</div>
+  <hr />
+  <div>
+    You have posted <b>{{postLength}}</b> time(s) and commented
+    <b>{{commentLength}}</b> time(s).
+    You can check your post and comment history below.
+  </div>
+  <hr />
+  <div>
+    Your Posts:
+  </div>
+  <app-post-tile [posts]="posts"></app-post-tile>
+  <hr />
+  <div>
+    Your Comments:
+  </div>
+  <div *ngFor="let comment of comments">
+    <div class="comment">
+      <div class="username">
+        <a routerLink="/user/comment.username">{{comment.userName}}</a>
+      </div>
+      <div>
+        <p>{{comment.duration}}</p>
+      </div>
+      <b>{{comment.text}}</b>
+    </div>
+    <hr />
+  </div>
+</div>
