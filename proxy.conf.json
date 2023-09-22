@@ -1,6 +1,6 @@
 {
     "/api/*": {
-      "target": "http://54.90.10.86:8080",
+      "target": "http://54.90.10.86:8181",
       "pathRewrite": {"^/api" :"/api"},
       "secure": false,
       "logLevel": "debug",
