@@ -1,0 +1,325 @@
+<div class="register-section">
+	<div class="row justify-content-center">
+		<div class="col-md-3"></div>
+		<div class="col-md-6">
+			<div class="card">
+				<div class="card-header" style="text-align: center">
+					<h4>Register to Vote</h4>
+					<h5>Vote for our Future!!!</h5>
+				</div>
+				<div class="card-body">
+					<form [formGroup]="signupForm" (ngSubmit)="signup()">
+
+
+
+
+						<div class="form-group row">
+							<label class="col-md-4 col-form-label text-md-right">First
+								Name</label>
+							<div class="col-md-6">
+								<input type="text" [formControlName]="'firstName'"
+									class="form-control" required autofocus> <span
+									*ngIf="!signupForm.get('firstName').valid && signupForm.get('firstName').touched">
+									Please provide a valid First Name </span>
+							</div>
+						</div>
+
+
+
+
+
+
+						<div class="form-group row">
+							<label class="col-md-4 col-form-label text-md-right">Last
+								Name</label>
+							<div class="col-md-6">
+								<input type="text" [formControlName]="'lastName'"
+									class="form-control" required autofocus> <span
+									*ngIf="!signupForm.get('lastName').valid && signupForm.get('lastName').touched">
+									Please provide a valid Last Name </span>
+							</div>
+						</div>
+
+
+
+
+
+
+
+
+						<div class="form-group row">
+							<label class="col-md-4 col-form-label text-md-right">Birth
+								Date</label>
+							<div class="col-md-6">
+								<input type="date" [formControlName]="'birthDate'"
+									class="form-control" required autofocus> <span
+									*ngIf="!signupForm.get('birthDate').valid && signupForm.get('birthDate').touched">
+									Please provide a valid Birth Date </span>
+							</div>
+						</div>
+
+
+
+
+
+
+
+						<div class="form-group row">
+							<label class="col-md-4 col-form-label text-md-right">Phone
+								Number</label>
+							<div class="col-md-6">
+								<input type="number" [formControlName]="'phoneNumber'"
+									class="form-control" required autofocus> <span
+									*ngIf="!signupForm.get('phoneNumber').valid && signupForm.get('phoneNumber').touched">
+									Please provide a valid Phone Number </span>
+							</div>
+						</div>
+
+
+
+
+
+
+						<div class="form-group row">
+							<label for="email_address"
+								class="col-md-4 col-form-label text-md-right">E-Mail
+								Address</label>
+							<div class="col-md-6">
+								<input type="text" [formControlName]="'email'"
+									id="email_address" class="form-control" name="email-address"
+									required autofocus> <span
+									*ngIf="!signupForm.get('email').valid && signupForm.get('email').touched">
+									Please provide a valid email </span>
+							</div>
+						</div>
+
+
+
+
+
+
+						<div class="form-group row">
+							<label class="col-md-4 col-form-label text-md-right">County</label>
+							<div class="col-md-6">
+								<select type="text" [formControlName]="'county'"
+									class="form-control" required autofocus>
+									<option selected="selected" value="" label="&#32;"
+										aria-label="Blank"></option>
+									<option value="100000002">Adams</option>
+									<option value="100000003">Allegheny</option>
+									<option value="100000004">Armstrong</option>
+									<option value="100000005">Beaver</option>
+									<option value="100000006">Bedford</option>
+									<option value="100000007">Berks</option>
+									<option value="100000008">Blair</option>
+									<option value="100000009">Bradford</option>
+									<option value="100000010">Bucks</option>
+									<option value="100000011">Butler</option>
+									<option value="100000012">Cambria</option>
+									<option value="100000001">Carbon</option>
+									<option value="100000013">Centre</option>
+									<option value="100000014">Chester</option>
+									<option value="100000015">Clarion</option>
+									<option value="100000016">Clearfield</option>
+									<option value="100000017">Clinton</option>
+									<option value="100000018">Columbia</option>
+									<option value="100000019">Crawford</option>
+									<option value="100000020">Cumberland</option>
+									<option value="100000021">Dauphin</option>
+									<option value="100000022">Delaware</option>
+									<option value="100000023">Elk</option>
+									<option value="100000024">Erie</option>
+									<option value="100000025">Fayette</option>
+									<option value="100000026">Forest</option>
+									<option value="100000027">Franklin</option>
+									<option value="100000028">Fulton</option>
+									<option value="100000029">Greene</option>
+									<option value="100000030">Huntingdon</option>
+									<option value="100000031">Indiana</option>
+									<option value="100000032">Jefferson</option>
+									<option value="100000033">Juniata</option>
+									<option value="100000034">Lackawanna</option>
+									<option value="100000035">Lancaster</option>
+									<option value="100000036">Lawrence</option>
+									<option value="100000037">Lebanon</option>
+									<option value="100000038">Lehigh</option>
+									<option value="100000039">Luzerne</option>
+									<option value="100000040">Lycoming</option>
+									<option value="100000041">McKean</option>
+									<option value="100000042">Mercer</option>
+									<option value="100000043">Mifflin</option>
+									<option value="100000044">Monroe</option>
+									<option value="100000045">Montgomery</option>
+									<option value="100000046">Montour</option>
+									<option value="100000047">Northampton</option>
+									<option value="100000048">Northumberland</option>
+									<option value="100000049">Perry</option>
+									<option value="100000050">Philadelphia</option>
+									<option value="100000051">Pike</option>
+									<option value="100000052">Potter</option>
+									<option value="100000053">Schuylkill</option>
+									<option value="100000054">Snyder</option>
+									<option value="100000055">Somerset</option>
+									<option value="100000056">Sullivan</option>
+									<option value="100000057">Susquehanna</option>
+									<option value="100000058">Tioga</option>
+									<option value="100000059">Union</option>
+									<option value="100000060">Venango</option>
+									<option value="100000061">Warren</option>
+									<option value="100000062">Washington</option>
+									<option value="100000063">Wayne</option>
+									<option value="100000064">Westmoreland</option>
+									<option value="100000065">Wyoming</option>
+									<option value="100000066">York</option>
+									<option value="100000067">Cameron</option>
+									<option value="100000068">Statewide</option>
+								</select> <span
+									*ngIf="!signupForm.get('county').valid && signupForm.get('county').touched">
+									Please provide a valid County </span>
+							</div>
+						</div>
+
+
+
+
+
+
+
+
+						<div class="form-group row">
+							<label class="col-md-4 col-form-label text-md-right">Address
+								Line 1</label>
+							<div class="col-md-6">
+								<input type="text" [formControlName]="'address1'"
+									class="form-control" required autofocus> <span
+									*ngIf="!signupForm.get('address1').valid && signupForm.get('address1').touched">
+									Please provide a valid Address </span>
+							</div>
+						</div>
+
+
+
+
+
+						<div class="form-group row">
+							<label class="col-md-4 col-form-label text-md-right">Address
+								Line 2</label>
+							<div class="col-md-6">
+								<input type="text" [formControlName]="'address2'"
+									class="form-control" required autofocus> <span
+									*ngIf="!signupForm.get('address2').valid && signupForm.get('address2').touched">
+									Please provide a valid Address </span>
+							</div>
+						</div>
+
+
+
+
+
+
+						<div class="form-group row">
+							<label class="col-md-4 col-form-label text-md-right">City</label>
+							<div class="col-md-6">
+								<input type="text" [formControlName]="'city'"
+									class="form-control" required autofocus> <span
+									*ngIf="!signupForm.get('city').valid && signupForm.get('city').touched">
+									Please provide a valid city </span>
+							</div>
+						</div>
+
+
+
+
+
+
+
+						<div class="form-group row">
+							<label class="col-md-4 col-form-label text-md-right">State</label>																	
+							<div class="col-md-6">
+								<select type="text" [formControlName]="'state'"
+									class="form-control" required autofocus>
+									<option selected="selected" value="" label="&#32;"
+										aria-label="Blank"></option>								
+								<option value="100000000">Alabama</option>
+								<option value="100000001">Alaska</option>
+								<option value="100000002">Arizona</option>
+								<option value="100000003">Arkansas</option>
+								<option value="100000004">California</option>
+								<option value="100000005">Colorado</option>
+								<option value="100000006">Connecticut</option>
+								<option value="100000007">Delaware</option>
+								<option value="100000008">District of Columbia</option>
+								<option value="100000009">Florida</option>
+								<option value="100000010">Georgia</option>
+								<option value="100000011">Hawaii</option>
+								<option value="100000012">Idaho</option>
+								<option value="100000013">Illinois</option>
+								<option value="100000014">Indiana</option>
+								<option value="100000015">Iowa</option>
+								<option value="100000016">Kansas</option>
+								<option value="100000017">Kentucky</option>
+								<option value="100000018">Louisiana</option>
+								<option value="100000019">Maine</option>
+								<option value="100000020">Maryland</option>
+								<option value="100000021">Massachusetts</option>
+								<option value="100000022">Michigan</option>
+								<option value="100000023">Minnesota</option>
+								<option value="100000024">Mississippi</option>
+								<option value="100000025">Missouri</option>
+								<option value="100000026">Montana</option>
+								<option value="100000027">Nebraska</option>
+								<option value="100000028">Nevada</option>
+								<option value="100000029">New Hampshire</option>
+								<option value="100000030">New Jersey</option>
+								<option value="100000031">New Mexico</option>
+								<option value="100000032">New York</option>
+								<option value="100000033">North Carolina</option>
+								<option value="100000034">North Dakota</option>
+								<option value="100000035">Ohio</option>
+								<option value="100000036">Oklahoma</option>
+								<option value="100000037">Oregon</option>
+								<option selected="selected" value="100000038">Pennsylvania</option>
+								<option value="100000039">Rhode Island</option>
+								<option value="100000040">South Carolina</option>
+								<option value="100000041">South Dakota</option>
+								<option value="100000042">Tennessee</option>
+								<option value="100000043">Texas</option>
+								<option value="100000044">Utah</option>
+								<option value="100000045">Vermont</option>
+								<option value="100000046">Virginia</option>
+								<option value="100000047">Washington</option>
+								<option value="100000048">West Virginia</option>
+								<option value="100000049">Wisconsin</option>
+								<option value="100000050">Wyoming</option>
+								<option value="100000051">Outside of United States</option>
+								</select>
+								<span
+									*ngIf="!signupForm.get('state').valid && signupForm.get('state').touched">
+									Please provide a valid State </span>
+							</div>
+						</div>
+
+
+
+						<div class="form-group row">
+							<label class="col-md-4 col-form-label text-md-right">Zip Code</label>
+							<div class="col-md-6">
+								<input type="number" [formControlName]="'zipCode'"
+									class="form-control" required autofocus> <span
+									*ngIf="!signupForm.get('zipCode').valid && signupForm.get('zipCode').touched">
+									Please provide a valid Zip Code </span>
+							</div>
+						</div>
+						
+
+
+						<span class="col-md-6 offset-md-4">
+							<button type="submit" class="sign-up">Register</button>
+						</span>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3"></div>
+	</div>
+</div>

@@ -1,6 +1,7 @@
 import { Injectable, Output, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { SignupRequestPayload } from '../signup/singup-request.payload';
+import { RegistrationRequestPayload } from 'src/app/registration/registration-request.payload.ts';
 import { Observable, throwError } from 'rxjs';
 import { LocalStorageService } from 'ngx-webstorage';
 import { LoginRequestPayload } from '../login/login-request.payload';
@@ -27,6 +28,10 @@ export class AuthService {
   signup(signupRequestPayload: SignupRequestPayload): Observable<any> {
     return this.httpClient.post('/api/auth/signup', signupRequestPayload, { responseType: 'text' });
   }
+
+  register(signupRequestPayload: RegistrationRequestPayload): Observable<any> {
+      return this.httpClient.post('/youthVote/pennsylvania/registration', signupRequestPayload, { responseType: 'text' });
+    }
 
   login(loginRequestPayload: LoginRequestPayload): Observable<boolean> {
     return this.httpClient.post<LoginResponse>('/api/auth/login',

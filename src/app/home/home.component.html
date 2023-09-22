@@ -2,6 +2,14 @@
   <div class="container">
     <div class="row">
       <hr />
+      <br><br>
+      <div>
+     	  <a routerLink="/registration" class="float-right login mr-2">Register To Vote</a>
+     	  <br>
+     	  <a routerLink="/checkStatus" class="float-right login mr-2">Registration Status</a>
+     	   <br>
+     	  <a routerLink="/findBooth" class="float-right login mr-2">Find Your Booth</a>
+      </div>
       <div class="col-md-9">
         <app-post-tile [posts]="posts"></app-post-tile>
       </div>
